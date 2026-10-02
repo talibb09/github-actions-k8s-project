@@ -26,4 +26,4 @@ jobs:
           context: ./backend
           file: ./backend/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/github-actions:talib 
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/github-actions:latest
