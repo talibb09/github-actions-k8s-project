@@ -17,7 +17,7 @@ jobs:
                key: ${{ secrets.PASSWORD }}
                port: 22
                script: |
-                cd ~/github-actions-k8s-project
+                cd /home/nishar/github-actions-for-devops/github-actions-kubernetes-masterclass
                 git pull origin main
                 docker compose pull
                 docker compose up -d
