@@ -19,8 +19,7 @@ jobs:
                key: ${{ secrets.EC2_SSH_KEY }}
                port: 22
                script: |
-                set -e
-                git clone https://github.com/talibb09/github-actions-k8s-project.git
+                set -e 
                 cd ~/github-actions-k8s-project
                 git pull origin main
                 docker compose pull
