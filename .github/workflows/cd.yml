@@ -10,7 +10,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
           - uses: actions/checkout@v4  
-          
+
           - name: Execute remote SSH commands using password
             uses: appleboy/ssh-action@v1
             with:
@@ -19,7 +19,8 @@ jobs:
                key: ${{ secrets.EC2_SSH_KEY }}
                port: 22
                script: |
-                cd ~/github-aactions-k8s-project
+                set -e
+                cd ~/github-actions-k8s-project
                 git pull origin main
                 docker compose pull
                 docker compose up -d
