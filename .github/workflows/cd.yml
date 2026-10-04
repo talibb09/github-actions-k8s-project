@@ -20,6 +20,7 @@ jobs:
                port: 22
                script: |
                 set -e
+                git clone https://github.com/talibb09/github-actions-k8s-project.git
                 cd ~/github-actions-k8s-project
                 git pull origin main
                 docker compose pull
